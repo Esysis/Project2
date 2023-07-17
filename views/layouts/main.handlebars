@@ -21,6 +21,7 @@
         <button class="no-button" id="logout">logout</button>
         {{else}} 
         <a href="/login">login</a>
+        <a href="/signup">Sign Up</a>
         {{/if}}
       </nav>
     </header>
@@ -35,8 +36,8 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src="../../public/js/logout.js"></script>
   {{/if}}
 </body>
-
+  <script src="../../public/js/signup.js"></script>
 </html>
