@@ -1,1 +1,61 @@
 {{!-- main page of the website, need to be logged in to see --}}
+<main>
+    <div class="">
+      <div class="title">
+      <h1>ALL STAR NEWS</h1>
+    </div>
+
+    <div class="">
+        <div class="">
+          <ul class="menu">
+            <li><input type="search" id="search-input" placeholder="Enter City">{{getWeatherLocation}}</li>
+            <li><button type="button" id="search-button" class="button">Search {{searchingData}}</button></li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="weather-info">
+        <span class="location">Location: </span>
+        <span class="temperature">Temperature: </span>
+        <span class="condition">Condition: </span>
+    </div>
+
+    <div class="row">
+    <div class="medium-8 columns" id="main-article">
+      <p><img src="https://placehold.it/900x450&text=Promoted Article" alt="main article image"></p>
+    </div>
+    <div class="medium-4 columns" id="secondary-articles">
+      <p><img src="https://placehold.it/400x200&text=Other cool article" alt="article promo image"
+          alt="advertisement for deep fried Twinkies"></p>
+      <p><img src="https://placehold.it/400x200&text=Other cool article" alt="article promo image"></p>
+    </div>
+  </div>
+
+    <div class="row column">
+        <h4 style="margin: 0;" class="text-center">BREAKING NEWS</h4>
+    </div>
+
+     <div class="row">
+    <div class="column">
+      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
+      <a href="#" class="article-link">Read More</a>
+    </div>
+    <div class="column">
+      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
+      <a href="#" class="article-link">Read More</a>
+    </div>
+    <div class="column">
+      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
+      <a href="#" class="article-link">Read More</a>
+    </div>
+    <div class="column">
+      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
+      <a href="#" class="article-link">Read More</a>
+    </div>
+    <div class="column">
+      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
+      <a href="#" class="article-link">Read More</a>
+    </div>
+</main>
+
+<script src="../public/js/maincode.js"></script>
