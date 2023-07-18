@@ -1,28 +1,33 @@
 <main class="container mt-5">
-  <h1 class="mb-4">Sign Up</h1>
+  <h1 class="mb-4 text-3xl font-bold">Sign Up</h1>
   <form id="signup-form" class="signup-form">
-    <div class="mb-3">
-      <label for="username" class="form-label">Username:</label>
+    <div class="mb-4">
+      <label for="username" class="block text-lg font-semibold">Username:</label>
       <input
         type="text"
-        class="form-control"
+        class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
         id="username"
         placeholder="Username"
       />
     </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Email" />
+    <div class="mb-4">
+      <label for="email" class="block text-lg font-semibold">Email:</label>
+      <input
+        type="email"
+        class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        id="email"
+        placeholder="Email"
+      />
     </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Password:</label>
+    <div class="mb-4">
+      <label for="password" class="block text-lg font-semibold">Password:</label>
       <input
         type="password"
-        class="form-control"
+        class="form-input w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
         id="password"
         placeholder="Password must be over (8) Characters long"
       />
     </div>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <button type="submit" class="btn btn-primary px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none">Sign Up</button>
   </form>
 </main>
