@@ -1,62 +1,50 @@
-{{!-- main page of the website, need to be logged in to see --}}
-<main>
-    <div class="">
-      <div class="title">
-      <h1>ALL STAR NEWS</h1>
-      <P>Welcom {{user.name}} </P>
-    </div>
-
-    <div class="">
-        <div class="">
-          <ul class="menu">
-            <li><input type="search" id="search-input" placeholder="Enter City"></li>
-            <li><button type="button" id="search-button" class="button">Search</button></li>
-          </ul>
-        </div>
-      </div>
-
-    <div class="weather-info">
-        <span class="location">Location: </span>
-        <span class="temperature">Temperature: </span>
-        <span class="condition">Condition: </span>
-    </div>
-
-    <div class="row">
-    <div class="medium-8 columns" id="main-article">
-      <p><img src="https://placehold.it/900x450&text=Promoted Article" alt="main article image"></p>
-    </div>
-    <div class="medium-4 columns" id="secondary-articles">
-      <p><img src="https://placehold.it/400x200&text=Other cool article" alt="article promo image"
-          alt="advertisement for deep fried Twinkies"></p>
-      <p><img src="https://placehold.it/400x200&text=Other cool article" alt="article promo image"></p>
+<!-- main page of the website, need to be logged in to see -->
+<main class="py-8 px-4 md:px-12 lg:px-24 xl:px-48 bg-gray-100">
+  <div class="mb-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold">ALL STAR NEWS</h1>
+      <p class="mt-2">Welcome {{user.name}}</p>
     </div>
   </div>
 
-    <div class="row column">
-        <h4 style="margin: 0;" class="text-center">BREAKING NEWS</h4>
+  <div class="mb-8">
+    <div class="flex items-center justify-center">
+      <input type="search" id="search-input" placeholder="Enter City" class="w-64 p-2 border border-gray-400 rounded-l-md focus:outline-none focus:border-blue-500">
+      <button type="button" id="search-button" class="px-4 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 focus:outline-none">Search</button>
     </div>
+  </div>
 
-     <div class="row">
-    <div class="column">
-      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
-      <a href="#" class="article-link">Read More</a>
+  <div class="mb-8">
+    <div class="flex items-center space-x-4 weather-info">
+      <span class="font-bold">Location:</span>
+      <span class="font-semibold">Temperature:</span>
+      <span class="font-semibold">Condition:</span>
     </div>
-    <div class="column">
-      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
-      <a href="#" class="article-link">Read More</a>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+    <div class="max-w-full rounded-lg overflow-hidden">
+      <img src="https://placehold.it/900x450&text=Promoted Article" alt="main article image" class="w-full h-auto">
     </div>
-    <div class="column">
-      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
-      <a href="#" class="article-link">Read More</a>
+    <div class="max-w-full rounded-lg overflow-hidden">
+      <img src="https://placehold.it/400x200&text=Other cool article" alt="article promo image" class="w-full h-auto">
     </div>
-    <div class="column">
-      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
-      <a href="#" class="article-link">Read More</a>
+    <div class="max-w-full rounded-lg overflow-hidden">
+      <img src="https://placehold.it/400x200&text=Other cool article" alt="article promo image" class="w-full h-auto">
     </div>
-    <div class="column">
-      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article">
-      <a href="#" class="article-link">Read More</a>
+  </div>
+
+  <div class="mb-4">
+    <h4 class="text-center font-bold">BREAKING NEWS</h4>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+    <div class="max-w-full rounded-lg overflow-hidden">
+      <img src="https://placehold.it/400x370&text=Look at me!" alt="image for article" class="w-full h-auto">
+      <a href="#" class="block text-center mt-2 text-blue-500 hover:underline">Read More</a>
     </div>
+    <!-- Repeat the above div for other columns (articles) -->
+  </div>
 </main>
 
 <script src="../public/js/maincode.js"></script>

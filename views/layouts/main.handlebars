@@ -7,30 +7,32 @@
   <title>News Chat</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Link the Tailwind CSS stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
+<body class="bg-gray-100">
+  <div class="flex flex-col justify-between min-h-screen">
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+      <h1 class="text-xl font-bold">
         Chatting News
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <button class="no-button" id="logout">logout</button>
+        <button class="px-4 py-2 text-white bg-blue-500 rounded-md" id="logout">Logout</button>
         {{else}} 
-        <a href="/login">login</a>
-        <a href="/signup">Sign Up</a>
+        <a href="/login" class="px-4 py-2 text-blue-500">Login</a>
+        <a href="/signup" class="px-4 py-2 text-white bg-blue-500 rounded-md">Sign Up</a>
         {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="container mt-5 mx-auto flex-grow">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
-      
+    <footer class="p-4 bg-white shadow-md">
+      <!-- Footer content goes here -->
     </footer>
   </div>
 
@@ -38,6 +40,6 @@
   {{#if logged_in}}
   <script src="../../public/js/logout.js"></script>
   {{/if}}
-</body>
   <script src="../../public/js/signup.js"></script>
+</body>
 </html>
