@@ -92,7 +92,7 @@ function populateArticle(article, elementId) {
 getNewsData();
 // This function iterates over each column div filling in the articles.
 function updateBreakingNews(articles) {
-    const breakingNewsDivs = document.querySelectorAll('.row.small-up-3.medium-up-4.large-up-5 .column');
+    const breakingNewsDivs = document.querySelectorAll('.breakingNews .breakingNews-li');
     
     for (let i = 0; i < breakingNewsDivs.length; i++) {
       if (articles[i]) {
