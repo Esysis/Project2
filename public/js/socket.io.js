@@ -1,6 +1,7 @@
 // Import Socket.IO
 const socket = io();
 
+
 // connects to the server
 socket.on('connect', () => {
   console.log('Connected to the server');
@@ -9,3 +10,4 @@ socket.on('connect', () => {
     console.log(`There are ${count} visitors on the site`);
   });
 });
+

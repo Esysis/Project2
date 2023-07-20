@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="/css/style.css">
   <!-- Link the Tailwind CSS stylesheet -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  socket.on('visitor', (msg) => {
+    document.getElementById('userCount').innerHTML = msg;
+  })
+</script>
 </head>
 
 <body class="bg-gray-100">
@@ -39,6 +46,8 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+<script src="/js/socket.io.js"></script>
 
 </body>
 </html>

@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helper');
 
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -50,7 +51,8 @@ sequelize.sync({ force: false }).then(() => {
   http.listen(PORT, () => console.log('Now listening'));
 });
 
-let onlineUsers = 0;
+var onlineUsers = 0
+
 io.on('connection', (socket) => {
   onlineUsers++;
   io.emit('visitor', onlineUsers);

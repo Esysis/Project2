@@ -1,10 +1,14 @@
 <!-- main page of the website, need to be logged in to see -->
+{{!-- weather section --}}
 <main class="py-8 px-4 md:px-12 lg:px-24 xl:px-48 bg-gray-100">
   <div class="mb-8">
     <div class="text-center">
       <h1 class="text-4xl font-bold">ALL STAR NEWS</h1>
+      {{#if user}}
       <p class="mt-2">Welcome {{user.name}}</p>
-      
+      {{else}}
+      <p class="mt-2">Welcome Unknown Stranger</p>
+      {{/if}}
     </div>
   </div>
 
@@ -22,7 +26,13 @@
       <span class="font-semibold condition">Condition:</span>
     </div>
   </div>
+{{!-- user count --}}
+<br>
 
+
+<p><span id="userCount">0</span> user(s) online</p>
+
+{{!-- news section --}}
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
     <div class="max-w-full rounded-lg overflow-hidden" id="main-article">
       <p>
