@@ -9,6 +9,11 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
+
+// Create an HTTP server with Express after 'app' is initialized
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
+
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
@@ -42,5 +47,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  http.listen(PORT, () => console.log('Now listening'));
+});
+
+let onlineUsers = 0;
+io.on('connection', (socket) => {
+  onlineUsers++;
+  io.emit('visitor', onlineUsers);
+  console.log('A user connected');
+
+  // disconnect
+  socket.on('disconnect', () => {
+    onlineUsers--;
+    //broadcast to all clients
+    io.emit('visitor', onlineUsers);
+    console.log('A user disconnected');
+  });
 });
