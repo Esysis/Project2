@@ -10,7 +10,7 @@ To use our website, simply open the link to the deployed site to bring you to th
 
 ## Screenshot of deployed site
 
-![This is a screenshot of the site after being fully optimized and set up atfer one week of building of and bug testing](/assets/Pictures/FinishedNewsSC.png)
+![This is a screenshot of the site after being fully optimized and set up atfer one week of building of and bug testing](/public/images/website-preview.jpg)
 
 ## link to deployed site
 
