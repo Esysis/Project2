@@ -10,46 +10,8 @@ const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 
 // This function fetch's the weather api data using the api key. Catching and displaying error if parameters aren't met.
-function getWeatherData(location) {
-    fetch(`https://api.weatherapi.com/v1/current.json?key=${WapiKey}&q=${location}`)
-        .then(response => response.json())
-        .then(data => {
-            updateWeatherInfo(data);
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-        });
-}
-// This function pulls and updates the current location name and country, current temp, and current conditions including corresponding weather icons and displays to the page through the html.
-function updateWeatherInfo(data) {
-    locationEl.textContent = `Location: ${data.location.name}, ${data.location.country}`;
-    temperatureEl.textContent = `Temperature: ${data.current.temp_f}°F`;
-    conditionEl.textContent = `Condition: ${data.current.condition.text}`;
-    const weatherIcon = document.createElement('img');
-    weatherIcon.src = `https:${data.current.condition.icon}`;
-    conditionEl.appendChild(weatherIcon);
-  }
-//   This sets the default location to new york
-getWeatherData('New York');
 
-// This single listener looks only for a mouse click on the search button
-searchButton.addEventListener('click', () => {
-    const location = searchInput.value;
-    if (location) {
-        getWeatherData(location);
-        searchInput.value = '';
-    }
-});
-// This single listener looks only for a press of the enter key in the search box
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        const location = searchInput.value;
-        if (location) {
-            getWeatherData(location);
-            searchInput.value = '';
-        }
-    }
-});
+
 // This function fetch's news data using the gNewsApiUrl const from earlier. Catching and displaying error if parameters aren't met.
 function getNewsData() {
     fetch(gNewsApiUrl)
