@@ -10,11 +10,11 @@ To use our website, simply open the link to the deployed site to bring you to th
 
 ## Screenshot of deployed site
 
-![This is a screenshot of the site after being fully optimized and set up atfer one week of building of and bug testing](/public/images/website-preview.jpg)
+![This is a screenshot of the site after being fully optimized and set up atfer one week of building of and bug testing](./public/images/website-preview.png) 
 
 ## link to deployed site
 
-** **
+https://floating-garden-70719-44bdf24b09b1.herokuapp.com/
 
 ## Resource links
 
@@ -26,7 +26,6 @@ https://tailwindcss.com/
 
 ## Google slide link 
 
-https://docs.google.com/presentation/d/1h0RYIO6gGgxuQE4h6zuSgOwrFy_E_Ycv9IuWQ-sYSHY/edit?usp=sharing
-
+https://docs.google.com/presentation/d/119KSxM3xpsLlDsGZM22FclG1Fq0PUxeGFlqRWiJRibI/edit?usp=sharing
 
 
